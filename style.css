@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&family=Kanit:wght@200;300;500;800&family=Reenie+Beanie&display=swap');
+
+:root{
+    --red-peach: #b80828;
+    --pink-peach: #f26f70;
+    --grey-pink: #e3a19c;
+    --yellow-peach: #f1e1b4;
+    --orange-peach: #e79b70;
+
+    --font-cairo: 'Cairo', sans-serif;
+    --font-kanit: 'Kanit', sans-serif;
+    --font-reenie: 'Reenie Beanie', cursive;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: auto;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 5px 20px ;
+    background-color: transparent;
+    position: absolute;
+}
+.fixed-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--red-peach);
+}
+nav a{
+    font-family: var(--font-cairo);
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+}
+nav h1{
+    font-size: 80px;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 20px;
+    list-style: none;
+}
+.toggle{
+    color: #fff;
+    align-self: center;
+}
+.toggle-open{
+    visibility: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .toggle-open{
+        visibility: visible;
+        font-size: 30px;
+    }
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--pink-peach);
+        box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
+        padding: 20px;
+        position: fixed;
+        top: 0%;
+        right: -100%;
+        transition: .4s;
+        width: 70vw;
+    }
+    .nav-list a{
+        color: #fff;
+    }
+}
+.show-nav-list{
+    right: 0%;
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red-peach);
+}
+.home h1{
+    font-family: var(--font-reenie);
+    font-size: 70px;
+    color: var(--yellow-peach);
+}
+.subtitle {
+    margin-top: 20px;
+    width: auto;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.subtitle .line{
+    width: 15vw;
+    height: 5px;
+    background-color: var(--yellow-peach);
+}
+.subtitle h2{
+    font-size: 40px;
+    color: var(--yellow-peach);
+    font-family: var(--font-reenie);
+}
+.about{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-family: var(--font-kanit);
+}
+.about-name{
+    font-size: 30px;
+}
+.about-description{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    width: 500px;
+    text-align: start;
+}
+.about-description img{
+    width: 400px;
+    align-self: center;
+}
+.ab-des-text p{
+    width: auto;
+    font-size: 30px;
+}
+.ab-enjoys, .ab-learn{
+    font-size: 40px;
+    color: var(--pink-peach);
+}
+.ab-website, .ab-app, .ab-never{
+    font-size: 50px;
+    color: var(--red-peach);
+}
+
+.projects{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 100px;
+}
+.project-title{
+    font-family: var(--font-cairo);
+    color: var(--red-peach);
+    font-size: 30px;
+}
+.projects a {
+    text-decoration: none;
+}
+.project-each{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+.project-each:hover{
+    transition: .5s;
+    background-color: rgba(242, 111, 112, 0.25);
+}
+.project-each img{
+    width: 350px;
+}
+.project-description{
+    width: 550px;
+    font-family: var(--font-kanit);
+}
+.project-description h1{
+    font-size: 35px;
+}
+.project-description p{
+    font-size: 25px;
+}
+
+.contact{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--red-peach);
+    color: #fff;
+}
+.contact h1{
+    font-family: var(--font-reenie);
+    font-size: 70px;
+}
+.contact-social{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.contact-social a{
+    text-decoration: none;
+}
+.contact-social a i{
+    color: #fff;
+    font-size: 50px;
+}
+@media screen and (max-width: 576px) {
+    nav a h1{
+        font-size: 30px;
+    }
+    .show-nav-list{
+        right: -10%;
+    }
+    .home h1{
+        font-size: 25px;
+    }
+    .subtitle h2{
+        font-size: 25px;
+    }
+    .subtitle .line{
+        height: 2px;
+    }
+    .about{
+        margin-bottom: 20px;
+    }
+    .about-name h1{
+        font-size: 25px;
+    }
+    .about-description{
+        width: 70vw;
+    }
+    .about-description img{
+        width: 70vw;
+    }
+    .ab-des-text p{
+        font-size: 15px;
+    }
+    .ab-enjoys, .ab-website, .ab-app, .ab-learn, .ab-never{
+        font-size: 30px;
+    }
+    .project-title h1{
+        font-size: 30px;
+    }
+    .project-description{
+        width: 70vw;
+        text-align: center;
+    }
+    .project-each{
+        width: 90vw;
+        padding: 10px;
+    }
+    .project-each img{
+        width: 70vw;
+    }
+    .project-description h1{
+        font-size: 20px;
+    }
+    .project-description p{
+        font-size: 15px;
+    }
+    .contact h1{
+        font-size: 25px;
+    }
+    .contact-social a i{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 321px) {
+    .home{
+        margin-bottom: 40px;
+    }
+    .about-name h1, .about-name p{
+        font-size: 20px;
+    }
+    .contact h1{
+        font-size: 30px;
+    }
+    .contact-social a i{
+        font-size: 20px;
+    }
+    .show-nav-list{
+        right: -10%;
+    }
+}
+@media screen and (min-width: 769px) {
+    nav a h1{
+        font-size: 40px;
+    }
+    nav ul a li{
+        padding: 0 20px;
+        font-size: 30px;
+    }
+    nav ul a li{
+        padding: 0 20px;
+        font-size: 30px;
+    }
+    nav ul a li:hover{
+        height: 5px;
+        transition: .2s;
+        background-color: var(--grey-pink);
+    }
+    .toggle{
+        display: none;
+    }
+    .home h1{
+        font-size: 70px;
+    }
+    .home h2{
+        font-size: 50px;
+    }
+    .about-name{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .about-name h1{
+        font-size: 50px;
+    }
+    .about-name p{
+        font-size: 40px;
+    }
+    .about-description{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 90px;
+        width: 90vw;
+    }
+    .about-description img{
+        width: 35vw;
+    }
+    .ab-des-text p{
+        font-size: 25px;
+    }
+    .project-each{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        width: 95vw;
+    }
+    .project-each img{
+        width: 500px;
+    }
+    .project-description h1{
+        width: 400px;
+    }
+    .project-description p{
+        width: 400px;
+    }
+}
+@media screen and (min-width: 992px) {
+   .project-description h1{
+       font-size: 30px;
+       width: auto;
+   }
+   .project-description p{
+       font-size: 30px;
+       width: auto;
+   }
+   .project-each img{
+       width: 30vw;
+   }
+   .project-each{
+       gap: 30px;
+   }
+}
